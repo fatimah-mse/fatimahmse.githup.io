@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu VIC WA NT Beginner";
+    --dark-blue: #1263a1;
+    --dark: #252243;
+    --dark-nav: #252243ea;
+    --beige: #f1e8cd;
+    --pink: #f28665;
+}
+h1 ,
+h5 {
+    font-family: "Merienda";
+    margin: 15px 0;
+    color: var(--beige);
+}
+h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+h5 {
+    font-size: larger;
+}
+.star::before ,
+.star::after {
+    display: inline-flex;
+    position: relative;
+    top: -6px;
+    content: "";
+    width: 70px;
+    height: 5px;
+    background-color: var(--beige);
+    border-radius: 20px;
+}
+.star::before {
+    margin-right: 10px;
+}
+.star::after {
+    margin-left: 10px;
+}
+.icon {
+    font-size: 30px;
+    color: var(--beige);
+}
+/* start navbar */
+.nav-bar {
+    position: fixed;
+    padding: 0 150px;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--dark-nav);
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.nav-bar h3 {
+    font-size: 22px;
+    font-family: "Merienda";
+    color: var(--beige);
+}
+.nav-bar ul {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.nav-bar ul .nav-item {
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar ul .nav-item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--beige);
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar ul .nav-item:hover {
+    background-color: var(--pink);
+}
+.nav-bar ul .nav-item:hover a{
+    color: var(--dark);
+}
+/* end navbar */
+/* start hero */
+.hero{
+    padding-top: 120px !important;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero .image {
+    position: relative;
+    width: 270px;
+    height: 250px;
+    background-color: var(--dark);
+    border-radius: 50%;
+
+}
+.hero .image img {
+    position: absolute;
+    top:-50px;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 0 0 200px 150px;
+}
+/* end hero */
+/* start main */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 45px 0;
+}
+.section-1,
+.section-3 {
+    background-color: var(--beige);
+}
+.section-2 {
+    background-color: var(--dark-blue);
+}
+.section-1 h1 ,
+.section-3 h1 {
+    color: var(--dark-blue) !important;
+}
+.section-1 .star .icon ,
+.section-3 .star .icon {
+    color: var(--dark-blue) !important;
+}
+.section-1 .star::before , 
+.section-1 .star::after,
+.section-3 .star::before , 
+.section-3 .star::after {
+    background-color: var(--dark-blue) !important;
+}
+.section-1 .cards {
+    padding: 20px 150px !important;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.section-1 .cards .card {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.section-1 .cards .card:hover{
+    background-color: var(--pink);
+}
+.section-1 .cards .card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--beige)
+}
+.section-2 .btn ,
+.section-3 .contact .btn{
+    margin-top: 7px;
+    padding: 7px 20px;
+    color: var(--beige);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    border: 2px solid var(--beige);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.section-2 .btn:hover,
+.section-3 .contact .btn:hover {
+    background-color: var(--pink);
+    color: var(--dark);
+}
+.section-2 .btn .icon {
+    margin-right: 6px;
+}
+.section-2 .about {
+    padding: 20px 320px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.section-2 .about p {
+    width: 100%;
+    color: var(--beige);
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin: 0 15px;
+}
+.section-3 .contact {
+    padding: 20px 400px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-3 .contact .filed ,
+.section-3 .contact .message {
+    margin: 10px 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--dark);
+    background-color: var(--beige);
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid var(--dark);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.section-3 .contact .filed:focus ,
+.section-3 .contact .message:focus{
+    background-color: var(--pink);
+}
+.section-3 .contact .filed {
+    height: 35px;
+}
+.section-3 .contact .btn {
+    height: 35px;
+    width: max-content;
+}
+/* end main */
+/* start footer */
+footer {
+    padding: 20px 0 !important;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .top-footer-section {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .top-footer-section div {
+    width: 30%;
+    text-align: center;
+    color: var(--beige);
+    font-weight: 700;
+}
+footer .top-footer-section div h4 {
+    font-family: "Merienda" ;
+    margin-bottom: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+footer .top-footer-section div a {
+    text-decoration: none;
+    color: var(--pink);
+}
+footer .top-footer-section div a:hover {
+    color: var(--dark-blue);
+}
+footer .top-footer-section div a .icon {
+    font-size: 20px !important;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--beige);
+}
+footer .top-footer-section div .icon:hover{
+    color: var(--pink);
+    border-color: var(--pink);
+}
+footer .bottom-footer-section {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--beige);
+    font-weight: 500;
+}
+/* end footer */
+@media screen and (max-width:1200px) {
+    .section-2 .about {
+        padding: 20px 250px !important;
+    }
+    .section-3 .contact {
+        padding: 20px 300px !important;
+    }
+}
+@media (max-width:991px) {
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px 0 !important;
+        height: 90px;
+    }
+    .nav-bar h3 {
+        font-size: 22px;
+    }
+    .nav-bar ul .nav-item {
+        padding: 8px 20px !important;
+    }
+    .hero{
+        top: 150px !important;
+    }
+    .section-2 .about {
+        padding: 20px 120px !important;
+    }
+    .section-3 .contact {
+        padding: 20px 130px !important;
+    }
+    footer .top-footer-section{
+        flex-direction: column;
+    }
+    footer .top-footer-section div{
+        width: 100%;
+        margin: 10px 0 30px 0;
+    }
+}
+@media (min-width:767px) and (max-width:991px) {
+    .section-1 .cards {
+        padding: 20px 125px !important;
+    }
+    .section-1 .cards .card {
+        width: 220px  !important;
+    }
+}
+@media (min-width:575px) and (max-width:768px) {
+    .section-1 .cards{
+        padding: 20px 18px !important;
+    }
+    .section-2 .about {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-2 .about p {
+        width: 100%;
+        margin: 10px 0 ;
+    }
+    .section-2 .about ,
+    .section-3 .contact {
+        padding: 20px 60px !important;
+    }
+    
+}
+@media (max-width:576px) {
+    .nav-bar h3 {
+        font-size: 18px;
+    }
+    .nav-bar ul .nav-item {
+        transform: scale(0.7);
+        padding: 5px 10px !important;
+    }
+    .hero .image {
+        transform: scale(0.85);
+    }
+    .hero h1 {
+        font-size: 20px;
+    }
+    .section-1 .cards {
+        padding: 10px 40px !important;
+    }
+    .section-1 .cards .card {
+        width: 100%;
+    }
+    section h1 {
+        font-size: 22px;
+    }
+    .hero h5 {
+        font-size: 18px;
+    }
+    .icon {
+        font-size: 22px;
+    }
+    .star::before ,
+    .star::after {
+        width: 50px;
+    }
+    .section-2 .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 50px !important;
+    }
+    .section-2 .about p {
+        width: 100%;
+        margin: 10px 0 ;
+    }
+    .section-3 .contact {
+        padding: 20px 50px !important;
+    }
+}

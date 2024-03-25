@@ -367,7 +367,7 @@ footer .bottom-footer-section {
         transform: scale(0.7);
         padding: 5px 10px !important;
     }
-    .hero .image {
+    .hero .image , footer h4 , footer p{
         transform: scale(0.85);
     }
     .hero h1 {
